@@ -8,18 +8,24 @@
 ## Структура
 
 ```
-erls4/                     исходники сеттингбука (Markdown) + собранные PDF рядом
-  aurora-erls4d-adaptation.md    адаптация E.R.L.S.4d под сеттинг «Аврора»
-  character-sheet.md             лист персонажа (базовый)
-  character-sheet-ingvar.md      заполненный лист: Ингвар
-  character-sheet-marta.md       заполненный лист: Марта
-  scenario-01-crocodile.md       вступительная сцена «Крокодил не несётся»
+erls4/                     исходники сеттингбука + собранные PDF рядом
+  aurora-erls4d-adaptation.md    адаптация E.R.L.S.4d под сеттинг «Аврора» (Markdown)
+  scenario-01-crocodile.md       вступительная сцена «Крокодил не несётся» (Markdown)
+  character-sheet.html           лист персонажа (базовый) — готовый HTML со своим CSS
+  character-sheet-ingvar.html    заполненный лист: Ингвар — HTML
+  character-sheet-marta.html     заполненный лист: Марта — HTML
 _scripts/                  сборочные скрипты
   build-pdf.sh                   markdown -> HTML -> PDF (A4), универсальный
-  build-sheet.sh                 сборка листа персонажа (A4, плотная вёрстка)
+  build-html.sh                  готовый HTML -> PDF (A4), без pandoc
+  build-sheet.sh                 обёртка: основной лист персонажа -> PDF
   _fix_rounds.py                 разовая правка раундов в листе Марты
 _preview/                  растровые превью (не версионируется)
 ```
+
+Листы персонажей — не Markdown, а сверстанный HTML: у каждого свой `<style>` с `@page`,
+классами и таблицами. Поэтому они собираются `build-html.sh` (Chromium печатает файл как есть),
+а не через pandoc: pandoc-HTML-reader выбрасывает `<style>`, и вёрстка теряется.
+Markdown-источники (адаптация, сцена) идут через `build-pdf.sh`.
 
 Исходный текст сеттинга (`erls4/_full.md`) — служебный материал, лежит только локально
 и в репозиторий не попадает.
@@ -27,11 +33,16 @@ _preview/                  растровые превью (не версион�
 ## Сборка PDF
 
 Требования: `pandoc` (проверено на 3.11), `chromium`, `pdfinfo` (poppler-utils).
-TeX не нужен: цепочка идёт через HTML5 → печать Chromium.
+TeX не нужен: цепочка идёт через HTML/HTML5 → печать Chromium.
 
 ```bash
+# Markdown-источники
 ./_scripts/build-pdf.sh erls4/scenario-01-crocodile.md erls4/scenario-01-crocodile.pdf
-./_scripts/build-sheet.sh          # -> erls4/character-sheet.pdf
+./_scripts/build-pdf.sh erls4/aurora-erls4d-adaptation.md erls4/aurora-erls4d-adaptation.pdf
+
+# HTML-листы персонажей (pandoc не нужен)
+./_scripts/build-sheet.sh                      # -> erls4/character-sheet.pdf
+./_scripts/build-html.sh erls4/character-sheet-marta.html erls4/character-sheet-marta.pdf
 ```
 
 Скрипты сами переходят в корень репозитория, поэтому пути аргументов считаются
@@ -45,7 +56,7 @@ TeX не нужен: цепочка идёт через HTML5 → печать C
 
 ## Заметки по вёрстке
 
-Пайплайн печатает HTML без CSS, поэтому у таблиц в PDF нет рамок и сетки:
+Пайплайн `build-pdf.sh` печатает HTML без CSS, поэтому у таблиц в PDF нет рамок и сетки:
 pandoc отдаёт «голый» `<table>`, а браузерный дефолт рамок не рисует. При необходимости
 рамки добавляются CSS-блоком в `_scripts/build-pdf.sh`:
 

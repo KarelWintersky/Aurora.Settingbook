@@ -350,9 +350,6 @@ th { background: #ececec; font-weight: 700; text-align: left; font-size: 7.6pt; 
 </div>
 
 <!--
-Пересборка PDF:
-  pandoc -f markdown -t html5 --standalone --metadata title="Аврора — лист персонажа" \
-    -o /tmp/sheet.html character-sheet.md
-  chromium --headless --no-sandbox --no-pdf-header-footer \
-    --print-to-pdf=character-sheet.pdf /tmp/sheet.html
+Пересборка PDF: ./_scripts/build-sheet.sh
+(или напрямую: ./_scripts/build-html.sh erls4/character-sheet.html erls4/character-sheet.pdf)
 -->
