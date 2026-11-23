@@ -2,18 +2,23 @@
 # Универсальная сборка: markdown -> HTML -> PDF (A4), без шаблона pandoc.
 # Использование: ./_scripts/build-md-to-pdf.sh input.md output.pdf
 # Пути аргументов считаются от корня репозитория.
+# Печатные стили (рамки таблиц, поля, кегль) — в _scripts/print.css.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 in="${1:?usage: build-md-to-pdf.sh input.md output.pdf}"
 out="${2:?usage: build-md-to-pdf.sh input.md output.pdf}"
 tmp="$(mktemp -d)"
+trap 'rm -rf "$tmp"' EXIT
 
 pandoc -f markdown -t html5 "$in" -o "$tmp/body.html"
 
 {
   printf '%s\n' '<!DOCTYPE html>' '<html lang="ru"><head><meta charset="utf-8">'
-  printf '%s\n' "<title>$(basename "$in" .md)</title></head><body>"
+  printf '%s\n' "<title>$(basename "$in" .md)</title>"
+  printf '%s\n' '<style>'
+  cat _scripts/print.css
+  printf '%s\n' '</style>' '</head><body>'
   cat "$tmp/body.html"
   printf '%s\n' '</body></html>'
 } > "$tmp/page.html"
@@ -22,5 +27,4 @@ chromium --headless --no-sandbox --disable-gpu \
   --no-pdf-header-footer --virtual-time-budget=3000 \
   --print-to-pdf="$out" "$tmp/page.html" 2>/dev/null
 
-rm -rf "$tmp"
 pdfinfo "$out" | grep -E 'Pages|Page size'
