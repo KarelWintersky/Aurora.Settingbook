@@ -1,0 +1,358 @@
+<style>
+@page { size: A4; margin: 10mm 10mm 11mm 10mm; }
+* { box-sizing: border-box; }
+body { font-family: 'DejaVu Sans', sans-serif; font-size: 8.4pt; line-height: 1.22; color: #151515; margin: 0; }
+.page { page-break-after: always; }
+.page:last-child { page-break-after: auto; }
+h1, h2, h3, p { margin: 0; }
+.masthead { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2px solid #151515; padding-bottom: 2mm; margin-bottom: 3mm; }
+.brand { font-size: 20pt; font-weight: 800; letter-spacing: 2.5px; line-height: 1; }
+.brand span { display: block; font-size: 7pt; font-weight: 400; letter-spacing: 1.6px; text-transform: uppercase; color: #555; margin-top: 1.2mm; }
+.doc { text-align: right; font-size: 11pt; font-weight: 700; }
+.doc span { display: block; font-size: 7pt; font-weight: 400; letter-spacing: 1px; color: #555; text-transform: uppercase; margin-top: 1.2mm; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 0.6px solid #8a8a8a; padding: 1mm 1.6mm; vertical-align: middle; }
+th { background: #ececec; font-weight: 700; text-align: left; font-size: 7.6pt; }
+.id td { height: 7.4mm; }
+.id th { width: 1%; white-space: nowrap; background: #f4f4f4; }
+.params { margin-top: 3mm; }
+.params td.param { width: 25%; text-align: center; padding: 1.2mm 1.5mm 1.6mm; }
+.pname { font-weight: 800; font-size: 9pt; letter-spacing: 0.6px; }
+.psub { font-size: 6.6pt; color: #666; margin-top: 0.4mm; }
+.pval { height: 9.4mm; border: 1.2px solid #222; border-radius: 2px; margin: 1.2mm auto 1mm; width: 70%; }
+.pmod { font-size: 7.4pt; color: #333; margin-bottom: 1.4mm; }
+.mini { display: inline-block; width: 6.6mm; height: 4.2mm; border: 0.7px solid #777; border-radius: 1.5px; vertical-align: -1px; margin-left: 0.6mm; }
+.asp { font-size: 7.2pt; color: #333; }
+.derived td { height: 6.4mm; }
+.derived th { background: #f4f4f4; white-space: nowrap; width: 1%; }
+.derived .f { display: block; font-size: 6.2pt; font-weight: 400; color: #777; }
+.note { font-size: 6.8pt; color: #666; margin-top: 1.2mm; }
+.cols2 { display: flex; gap: 3mm; }
+.cols2 > div { width: calc(50% - 1.5mm); }
+.skills td { height: 3.9mm; padding: 0.35mm 1.4mm; }
+.skills th { padding: 0.8mm 1.4mm; }
+.skills td.c { text-align: center; color: #555; font-size: 7pt; }
+.skills tr.grp td { background: #dcdcdc; font-weight: 800; font-size: 7.6pt; letter-spacing: 0.5px; height: 5mm; }
+.skills td.name { font-size: 7.6pt; }
+.sec { margin-top: 2.4mm; }
+.sechead { font-weight: 800; font-size: 9pt; letter-spacing: 0.7px; text-transform: uppercase; border-bottom: 1.2px solid #222; padding-bottom: 0.8mm; margin-bottom: 1.6mm; }
+.weap td, .armor td, .rep td, .money td { height: 6.4mm; }
+.wounds td { height: 5.4mm; padding: 0.4mm 1.6mm; }
+.weap td.c, .armor td.c { text-align: center; }
+.lines div { border-bottom: 0.6px dotted #777; height: 6.2mm; }
+.traits { display: flex; gap: 3mm; }
+.traits > div { width: 50%; }
+.traits table td { height: 6.2mm; }
+.clock { display: inline-block; width: 5.4mm; height: 5.4mm; border: 0.9px solid #444; border-radius: 50%; margin: 0 0.7mm 0 0; }
+.cb { display: inline-block; width: 3.6mm; height: 3.6mm; border: 0.8px solid #444; vertical-align: -0.7px; margin-right: 1mm; }
+.big { font-size: 10pt; font-weight: 700; }
+.filled { background: #f7f7f7; }
+.val { font-weight: 700; }
+.hint { color: #999; }
+.cheat h2 { font-size: 10pt; margin: 0 0 1.1mm; padding-bottom: 0.6mm; border-bottom: 1.1px solid #222; letter-spacing: 0.4px; }
+.cheat table { margin-bottom: 2mm; font-size: 7.5pt; }
+.cheat td, .cheat th { padding: 0.5mm 1.4mm; }
+.cheat ul { margin: 0 0 2.5mm; padding-left: 4.5mm; }
+.cheat li { margin-bottom: 0.7mm; }
+.tag { display: inline-block; font-size: 6.4pt; color: #fff; background: #444; padding: 0.2mm 1.2mm; border-radius: 1.5px; vertical-align: 1px; }
+</style>
+
+<div class="page">
+<div class="masthead"><div class="brand">АВРОРА<span>колония · эпоха Основания · годы 10–30</span></div><div class="doc">Лист персонажа<span>E.R.L.S.4d · к6 / к12</span></div></div>
+<table class="id"><colgroup><col style="width:16%"><col style="width:34%"><col style="width:15%"><col style="width:35%"></colgroup>
+<tr><th>Имя</th><td></td><th>Возраст</th><td></td></tr>
+<tr><th>Происхождение</th><td></td><th>Фракция</th><td></td></tr>
+<tr><th>Игрок</th><td></td><th>Сессий / опыт</th><td></td></tr>
+</table>
+<table class="params"><tr>
+<td class="param"><div class="pname">ОФП</div><div class="psub">сила · здоровье · выносливость</div><div class="pval"></div><div class="pmod">модификатор <span class="mini"></span></div><div class="asp">сила <span class="mini"></span> здоровье <span class="mini"></span></div></td>
+<td class="param"><div class="pname">ЛОВКОСТЬ</div><div class="psub">подвижность · меткость · нервы</div><div class="pval"></div><div class="pmod">модификатор <span class="mini"></span></div><div class="asp">подвижность <span class="mini"></span> меткость <span class="mini"></span></div></td>
+<td class="param"><div class="pname">РАЗУМ</div><div class="psub">интеллект · память · анализ</div><div class="pval"></div><div class="pmod">модификатор <span class="mini"></span></div><div class="asp">интеллект <span class="mini"></span> память <span class="mini"></span></div></td>
+<td class="param"><div class="pname">ДУХ</div><div class="psub">воля · интуиция · эмпатия</div><div class="pval"></div><div class="pmod">модификатор <span class="mini"></span></div><div class="asp">воля <span class="mini"></span> интуиция <span class="mini"></span></div></td>
+</tr></table>
+<div class="note">Сумма параметров: <span class="mini" style="width:10mm"></span> из 29 (взрослый) или 4+возраст (подросток). Средний — 7. Аспект от −1 до +2, сумма в паре не выше +1. Модификатор параметра: 3–4 → −2 · 5–6 → −1 · 7–8 → 0 · 9–10 → +1 · 11–12 → +2.</div>
+<table class="derived sec"><tr><th>ХП<span class="f">8 + ОФП + 2×здоровье</span></th><td></td><th>ВЫН<span class="f">2×ОФП + 2×здоровье</span></th><td></td><th>ЕД<span class="f">3 + Ловкость/2 + подвижность</span></th><td></td></tr>
+<tr><th>Инициатива<span class="f">к6 + Ловкость/2 + подвижность</span></th><td></td><th>Защита<span class="f">4 + мод.Ловк + подвижность + укрытие − броня</span></th><td></td><th>Груз, кг<span class="f">ОФП × 5</span></th><td></td></tr></table>
+<div class="sechead sec">Ранения</div>
+<table class="wounds"><tr><th>Ранение</th><th>Порог (за один удар)</th><th>Штраф</th><th>Множитель</th><th>Хиты ранений</th></tr>
+<tr><td>Лёгкое</td><td>до 0,2 × ХП</td><td>0</td><td>×5</td><td></td></tr>
+<tr><td>Среднее</td><td>до 0,4 × ХП</td><td>−1</td><td>×10</td><td></td></tr>
+<tr><td>Тяжёлое</td><td>до 0,6 × ХП</td><td>−2</td><td>×10</td><td></td></tr>
+<tr><td>Критическое</td><td>до 0,8 × ХП</td><td>−4</td><td>×20</td><td></td></tr>
+<tr><td>Смертельное</td><td>до ХП + ОФП</td><td>−8</td><td>×40</td><td></td></tr></table>
+<div class="note">Тяжести складываются: два лёгких ≈ одно среднее. Лечение — ОФП + бонус медицины хитов ранений в сутки.</div>
+<div class="sechead sec">Навыки</div>
+<div class="cols2">
+<div><table class="skills"><tr><th style="width:62%">Навык</th><th style="width:12%">Пар</th><th style="width:12%">Ур</th><th style="width:14%">Бонус</th></tr>
+<tr class="grp"><td colspan="4">ОФП</td></tr>
+<tr><td class="name">Атлетика</td><td class="c">ОФП</td><td></td><td></td></tr>
+<tr><td class="name">Марш</td><td class="c">ОФП</td><td></td><td></td></tr>
+<tr><td class="name">Рукопашный бой</td><td class="c">ОФП</td><td></td><td></td></tr>
+<tr><td class="name">Тяжёлое оружие</td><td class="c">ОФП</td><td></td><td></td></tr>
+<tr><td class="name">Верховая езда</td><td class="c">ОФП</td><td></td><td></td></tr>
+<tr><td class="name">Гребля и парус</td><td class="c">ОФП</td><td></td><td></td></tr>
+<tr class="grp"><td colspan="4">ЛОВКОСТЬ</td></tr>
+<tr><td class="name">Стрельба: револьвер</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr><td class="name">Стрельба: длинноствол</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr><td class="name">Холодное: клинок</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr><td class="name">Холодное: дробящее</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr><td class="name">Метание</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr><td class="name">Скрытность</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr><td class="name">Акробатика</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr><td class="name">Мелкая моторика</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr><td class="name">Вождение</td><td class="c">Лов</td><td></td><td></td></tr>
+<tr class="grp"><td colspan="4">РАЗУМ</td></tr>
+<tr><td class="name">Механика</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Электрика и радио</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Металлургия</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Химия и нефтехимия</td><td class="c">Раз</td><td></td><td></td></tr>
+</table></div>
+<div><table class="skills"><tr><th style="width:62%">Навык</th><th style="width:12%">Пар</th><th style="width:12%">Ур</th><th style="width:14%">Бонус</th></tr>
+<tr><td class="name">Медицина</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Первая помощь</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Биология Авроры</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Геология</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Инженерия</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Пилотирование</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Судовождение</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Компьютеры</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Торговля и бюрократия</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Крокодиловодство</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Фермерство</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Винокурение</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Оружейник</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Снайпер</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr><td class="name">Военное дело</td><td class="c">Раз</td><td></td><td></td></tr>
+<tr class="grp"><td colspan="4">ДУХ</td></tr>
+<tr><td class="name">Убеждение</td><td class="c">Дух</td><td></td><td></td></tr>
+<tr><td class="name">Запугивание</td><td class="c">Дух</td><td></td><td></td></tr>
+<tr><td class="name">Эмпатия</td><td class="c">Дух</td><td></td><td></td></tr>
+<tr><td class="name">Лидерство</td><td class="c">Дух</td><td></td><td></td></tr>
+<tr><td class="name">Арфист</td><td class="c">Дух</td><td></td><td></td></tr>
+<tr><td class="name">Сенсорика</td><td class="c">Дух</td><td></td><td></td></tr>
+</table></div>
+</div>
+<div class="note">Уровни: нет навыка −4 · Novice 0 · Basic +1 · Advanced +2 · Expert +3 · Master +5 · Grandmaster +8 · Legendary +13 (NPC). Бонус = уровень + модификатор параметра.</div>
+</div>
+
+<div class="page">
+<div class="masthead"><div class="brand">АВРОРА<span>лист персонажа · страница 2</span></div><div class="doc">Снаряжение и связи<span>дефицит — это механика</span></div></div>
+<div class="cols2">
+<div>
+<div class="sechead">Оружие</div>
+<table class="weap"><tr><th>Оружие</th><th>Урон</th><th>ЕД</th><th>Заряд</th><th>Патроны</th></tr>
+<tr><td></td><td class="c"></td><td class="c"></td><td class="c"></td><td class="c"></td></tr>
+<tr><td></td><td class="c"></td><td class="c"></td><td class="c"></td><td class="c"></td></tr>
+<tr><td></td><td class="c"></td><td class="c"></td><td class="c"></td><td class="c"></td></tr>
+<tr><td></td><td class="c"></td><td class="c"></td><td class="c"></td><td class="c"></td></tr></table>
+<div class="note">Выстрел — 2 ЕД. Перезарядка однозарядки — 3 ЕД. Кустарное оружие: осечка на «1», урон себе 1d6.</div>
+<div class="sechead sec">Броня</div>
+<table class="armor"><tr><th>Броня</th><th>Урон −</th><th>Штраф</th><th>Где</th></tr>
+<tr><td></td><td class="c"></td><td class="c"></td><td class="c"></td></tr>
+<tr><td></td><td class="c"></td><td class="c"></td><td class="c"></td></tr>
+<tr><td></td><td class="c"></td><td class="c"></td><td class="c"></td></tr></table>
+<div class="note">Стёганка 1 · крокодилья кожа 2 (−1 Лов) · кираса 3 (−2 Лов) · каска 1 (голова) · импортный бронежилет 3.</div>
+<div class="sechead sec">Снаряжение</div>
+<div class="lines"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+<div>
+<div class="sechead">Репутация <span style="font-weight:400;text-transform:none;font-size:7pt;color:#666">−5 враг … 0 … +5 свой</span></div>
+<table class="rep"><tr><th>Фракция</th><th style="width:20%">Знач.</th><th>Заметки</th></tr>
+<tr><td>Лэндинг</td><td></td><td></td></tr>
+<tr><td>Техноград</td><td></td><td></td></tr>
+<tr><td>Синдикат фермеров</td><td></td><td></td></tr>
+<tr><td>Контроль</td><td></td><td></td></tr>
+<tr><td>Вольники</td><td></td><td></td></tr>
+<tr><td><b>Розыск</b> (0–5)</td><td></td><td></td></tr></table>
+<div class="sechead sec">Деньги</div>
+<table class="money"><tr><th>Трудочасы</th><th>Рубли</th><th>Кроксы</th><th>Достаток</th></tr>
+<tr><td></td><td></td><td></td><td></td></tr></table>
+<div class="note">1 трудочас ≈ 1,2 рубля ≈ 1,5 крокса. Достаток 0–5: покупка ниже — без учёта, выше — нужны деньги, долг или одолжение.</div>
+<div class="sechead sec">Черты</div>
+<div class="traits"><div><table><tr><th>Положительная</th></tr><tr><td></td></tr><tr><td></td></tr></table></div><div><table><tr><th>Отрицательная</th></tr><tr><td></td></tr><tr><td></td></tr></table></div></div>
+<div class="sechead sec">Связи</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+</div>
+<div class="sechead sec">Проект / долг / часы</div>
+<div style="border:0.6px solid #8a8a8a;padding:2mm 2.4mm"><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span><span class="clock"></span> <span style="font-size:7pt;color:#666">— плотина, дорога, госпиталь, ремонт, долг</span></div>
+<div class="cols2 sec">
+<div><div class="sechead">Развитие</div>
+<table class="money"><tr><th>Опыт навыков</th><th>Опыт параметров</th></tr>
+<tr><td></td><td></td></tr><tr><td></td><td></td></tr></table>
+<div class="note">За сессию: 1 опыт в навыки + 1 в параметры. Параметр N → N+1 стоит N+1 опыта.</div></div>
+<div><div class="sechead">Транспорт и животные</div>
+<table class="rep"><tr><th>Что</th><th>Состояние</th></tr>
+<tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></table>
+<div class="note">Сирруф, козёл, лошадь, баржа, гидросамолёт, дирижабль, узкоколейка.</div></div>
+</div>
+<div class="sechead sec">Заметки</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+
+<div class="page">
+<div class="masthead"><div class="brand">АВРОРА<span>пример заполнения</span></div><div class="doc">Марта, 16 лет<span>дочь крокодиловода · Синдикат</span></div></div>
+<table class="id"><colgroup><col style="width:16%"><col style="width:34%"><col style="width:15%"><col style="width:35%"></colgroup>
+<tr><th>Имя</th><td class="val">Марта</td><th>Возраст</th><td class="val">16</td></tr>
+<tr><th>Происхождение</th><td class="val">Фермер Синдиката</td><th>Фракция</th><td class="val">Синдикат фермеров</td></tr>
+<tr><th>Игрок</th><td class="val">—</td><th>Очки</th><td class="val">20 = 4 + 16</td></tr>
+</table>
+<table class="params filled"><tr>
+<td class="param"><div class="pname">ОФП</div><div class="pval val">6</div><div class="pmod">модификатор <b>−1</b></div><div class="asp">сила <b>+1</b> · здоровье <b>0</b></div></td>
+<td class="param"><div class="pname">ЛОВКОСТЬ</div><div class="pval val">6</div><div class="pmod">модификатор <b>−1</b></div><div class="asp">подвижность <b>+1</b> · меткость <b>0</b></div></td>
+<td class="param"><div class="pname">РАЗУМ</div><div class="pval val">5</div><div class="pmod">модификатор <b>−1</b></div><div class="asp">интеллект <b>+1</b> · память <b>0</b></div></td>
+<td class="param"><div class="pname">ДУХ</div><div class="pval val">3</div><div class="pmod">модификатор <b>−2</b></div><div class="asp">воля <b>0</b> · интуиция <b>−1</b></div></td>
+</tr></table>
+<table class="derived sec"><tr><th>ХП</th><td class="val">14</td><th>ВЫН</th><td class="val">12</td><th>ЕД</th><td class="val">7</td></tr>
+<tr><th>Инициатива</th><td class="val">к6 + 4</td><th>Защита</th><td class="val">4</td><th>Груз, кг</th><td class="val">30</td></tr></table>
+<div class="cols2 sec">
+<div><div class="sechead">Навыки</div>
+<table class="skills"><tr><th style="width:56%">Навык</th><th style="width:12%">Ур</th><th style="width:16%">Бонус</th></tr>
+<tr><td class="name">Стрельба: длинноствол</td><td class="c">Adv</td><td class="c val">+1</td></tr>
+<tr><td class="name">Крокодиловодство</td><td class="c">Adv</td><td class="c val">+1</td></tr>
+<tr><td class="name">Скрытность</td><td class="c">Basic</td><td class="c val">0</td></tr>
+<tr><td class="name">Первая помощь</td><td class="c">Basic</td><td class="c val">0</td></tr>
+<tr><td class="name">Верховая езда</td><td class="c">Basic</td><td class="c val">0</td></tr>
+<tr><td class="name">Торговля</td><td class="c">Nov</td><td class="c val">0</td></tr>
+<tr><td class="name">Винокурение</td><td class="c">Nov</td><td class="c val">0</td></tr>
+<tr><td class="name">Остальное</td><td class="c" colspan="2">нет навыка (−4)</td></tr>
+</table>
+<div class="note">Бонус = уровень + мод. параметра: Advanced (+2) при Ловкости 6 (−1) = +1.</div></div>
+<div><div class="sechead">Снаряжение</div>
+<table class="weap"><tr><th>Оружие</th><th>Урон</th><th>ЕД</th><th>Патроны</th></tr>
+<tr><td>Дробовик отца</td><td class="c">2d6+2</td><td class="c">2</td><td class="c">8</td></tr>
+<tr><td>Нож</td><td class="c">1d6+1</td><td class="c">2</td><td class="c">—</td></tr></table>
+<table class="armor" style="margin-top:2mm"><tr><th>Броня</th><th>Урон −</th><th>Штраф</th></tr>
+<tr><td>Крокодилья куртка</td><td class="c">2</td><td class="c">−1 Лов</td></tr></table>
+<div class="sechead sec">Черты</div>
+<div class="traits"><div><table><tr><th>Положительная</th></tr><tr><td>Нюх на неприятности</td></tr></table></div><div><table><tr><th>Отрицательная</th></tr><tr><td>Долг семье</td></tr></table></div></div>
+</div></div>
+<div class="cols2 sec">
+<div><div class="sechead">Репутация</div>
+<table class="rep"><tr><th>Фракция</th><th style="width:18%">Знач.</th></tr>
+<tr><td>Синдикат фермеров</td><td class="val">+2</td></tr>
+<tr><td>Лэндинг</td><td class="val">0</td></tr>
+<tr><td>Техноград</td><td class="val">0</td></tr>
+<tr><td>Контроль</td><td class="val">0</td></tr>
+<tr><td>Вольники</td><td class="val">−1</td></tr></table></div>
+<div><div class="sechead">Деньги</div>
+<table class="money"><tr><th>Трудочасы</th><th>Рубли</th><th>Кроксы</th><th>Дост.</th></tr>
+<tr><td class="val">0</td><td class="val">10</td><td class="val">35</td><td class="val">2</td></tr></table>
+<div class="note">Сирруф — семейный, не в счёт. Патроны к дробовику — 1 крокс штука.</div></div></div>
+<div class="note" style="margin-top:3mm">Проверка: ХП 8+6+0=14 · ВЫН 2×6+0=12 · ЕД 3+3+1=7 · Инициатива к6+3+1=к6+4 · Защита 4+(−1)+1=4.</div>
+<div class="cols2 sec">
+<div><div class="sechead">Связи</div>
+<table class="rep"><tr><th>Кто</th><th>Кем приходится</th></tr>
+<tr><td>Отец</td><td>хозяин фермы, ~300 аллигаторов</td></tr>
+<tr><td>Брат</td><td>сменный мастер в Технограде, редко пишет</td></tr>
+<tr><td>Арфист</td><td>проезжий, знает семью; через него — вести</td></tr></table></div>
+<div><div class="sechead">Транспорт и животные</div>
+<table class="rep"><tr><th>Что</th><th>Состояние</th></tr>
+<tr><td>Сирруф (семейный)</td><td>приручён с яйца, знает Марту</td></tr>
+<tr><td>Лодка-плоскодонка</td><td>для озера, без мотора</td></tr></table></div>
+</div>
+</div>
+
+<div class="page cheat">
+<div class="masthead"><div class="brand">АВРОРА<span>шпаргалка игрока</span></div><div class="doc">E.R.L.S.4d<span>эпоха Основания</span></div></div>
+<div class="cols2"><div>
+<h2>Броски</h2>
+<table><tr><th>Когда</th><th>Формула</th></tr>
+<tr><td>Задача, стрельба</td><td><b>к6 + бонус ≥ сложность</b></td></tr>
+<tr><td>Ближний бой, спор</td><td><b>к6 + атака vs к6 + защита</b></td></tr>
+<tr><td>Терпеть (шок, пыльца, страх)</td><td><b>к12 ≤ параметр − штраф</b></td></tr>
+<tr><td>Равенство</td><td>царапина: минимальный урон, без ранения</td></tr>
+<tr><td>Нет навыка</td><td>−4 + мод. параметра</td></tr></table>
+<h2>Сложности</h2>
+<table><tr><th>Сл.</th><th>Что это</th><th>Пример</th></tr>
+<tr><td>2</td><td>элементарно</td><td>завести знакомого сирруфа</td></tr>
+<tr><td>3</td><td>легко</td><td>починить насос с деталями</td></tr>
+<tr><td>4</td><td>средне</td><td>переплыть протоку в одежде</td></tr>
+<tr><td>5</td><td>средне+</td><td>продать крокодила в долг</td></tr>
+<tr><td>6</td><td>трудно</td><td>сварить сталь без мастера</td></tr>
+<tr><td>7</td><td>очень трудно</td><td>посадка на воду при ветре</td></tr>
+<tr><td>8+</td><td>экстраординарно</td><td>найти руду по обломкам</td></tr></table>
+<h2>Уровни навыков</h2>
+<table><tr><th>Уровень</th><th>Бонус</th><th>Параметр</th></tr>
+<tr><td>Нет</td><td>−4</td><td>—</td></tr>
+<tr><td>Novice</td><td>0</td><td>1–2</td></tr>
+<tr><td>Basic</td><td>+1</td><td>3–4</td></tr>
+<tr><td>Advanced</td><td>+2</td><td>5–6</td></tr>
+<tr><td>Expert</td><td>+3</td><td>7–8</td></tr>
+<tr><td>Master</td><td>+5</td><td>9–11</td></tr>
+<tr><td>Grandmaster</td><td>+8</td><td>12+</td></tr>
+<tr><td>Legendary</td><td>+13</td><td>только NPC</td></tr></table>
+<h2>Урон</h2>
+<table><tr><th>Оружие</th><th>Урон</th><th>ЕД</th></tr>
+<tr><td>Кулак</td><td>1d3 + сила</td><td>2</td></tr>
+<tr><td>Нож</td><td>1d6 + сила/2</td><td>2</td></tr>
+<tr><td>Топор / дубина</td><td>2d6 + сила</td><td>3</td></tr>
+<tr><td>Клинок</td><td>2d6+2 + сила/2</td><td>2</td></tr>
+<tr><td>Револьвер</td><td>2d6+1</td><td>2</td></tr>
+<tr><td>Дробовик</td><td>2d6+2</td><td>2</td></tr>
+<tr><td>Винтовка</td><td>3d6</td><td>2</td></tr>
+<tr><td>Тяжёлое</td><td>3d6+2</td><td>3</td></tr>
+<tr><td>Кустарное</td><td>2d6, осечка на «1»</td><td>3</td></tr></table>
+<p style="font-size:7.4pt">Броня вычитает урон: стёганка 1 · крокодилья кожа 2 (−1 Лов) · кираса 3 (−2 Лов) · бронежилет 3.</p>
+<h2>Укидки (к12)</h2>
+<table><tr><th>Против чего</th><th>Бросок</th></tr>
+<tr><td>Шок</td><td>к12 ≤ ОФП − мощность</td></tr>
+<tr><td>Без сознания</td><td>к12 ≤ ОФП − сумма штрафов</td></tr>
+<tr><td>Пыльца</td><td>к12 ≤ ОФП + здоровье − интенсивность</td></tr>
+<tr><td>Страх</td><td>к12 ≤ Воля − штраф</td></tr>
+<tr><td>Инфекция</td><td>к12 ≤ ОФП − тяжесть раны</td></tr></table>
+</div><div>
+<h2>Раунд</h2>
+<table><tr><th>Действие</th><th>ЕД</th></tr>
+<tr><td>Шаг на зону (5–10 м)</td><td>1</td></tr>
+<tr><td>Прицеливание (+1, макс +2)</td><td>1</td></tr>
+<tr><td>Выстрел</td><td>2</td></tr>
+<tr><td>Удар клинком / кулаком</td><td>2</td></tr>
+<tr><td>Удар тяжёлым</td><td>3</td></tr>
+<tr><td>Перезарядка однозарядки</td><td>3</td></tr>
+<tr><td>Укрыться / сменить стойку</td><td>1</td></tr>
+<tr><td>Активная защита (+2)</td><td>1</td></tr>
+<tr><td>Первая помощь</td><td>3</td></tr></table>
+<h2>Стрельба</h2>
+<table><tr><th>Дистанция</th><th>Мод.</th></tr>
+<tr><td>В упор, дробовик</td><td>+2</td></tr>
+<tr><td>До 15 м</td><td>0</td></tr>
+<tr><td>До 50 м</td><td>−1</td></tr>
+<tr><td>До 150 м</td><td>−2</td></tr>
+<tr><td>Дальше</td><td>−3 (оптика / снайпер)</td></tr></table>
+<p style="font-size:7.6pt;margin-bottom:2mm">Укрытие: +1 частичное, +2 серьёзное, +3 только голова.</p>
+<h2>Ранения</h2>
+<table><tr><th>Ранение</th><th>Доля ХП</th><th>Штраф</th></tr>
+<tr><td>Лёгкое</td><td>0,2</td><td>0</td></tr>
+<tr><td>Среднее</td><td>0,4</td><td>−1</td></tr>
+<tr><td>Тяжёлое</td><td>0,6</td><td>−2</td></tr>
+<tr><td>Критическое</td><td>0,8</td><td>−4</td></tr>
+<tr><td>Смертельное</td><td>ХП + ОФП</td><td>−8</td></tr></table>
+<h2>Мир</h2>
+<ul>
+<li>Сначала договариваются, потом стреляют. Но стреляют быстро.</li>
+<li>Патроны считаем; артефакты не чинятся.</li>
+<li>В сезон штормовой лилии — маска или укидка ОФП.</li>
+<li>Репутация влияет на цены: ±10 % за пункт.</li>
+<li>Комиссар Контроля советует. Совет обычно верен.</li>
+</ul>
+<h2>Стойки</h2>
+<table><tr><th>Стойка</th><th>Что даёт</th></tr>
+<tr><td>Атакующая</td><td>+урон, +атака, −защита, −инициатива</td></tr>
+<tr><td>Защитная</td><td>+защита, +инициатива, −атака</td></tr>
+<tr><td>Мощная</td><td>+урон, +атака, −защита, −инициатива</td></tr>
+<tr><td>Скоростная</td><td>+ЕД, −атака, −инициатива</td></tr>
+<tr><td>Инициативная</td><td>+инициатива, +защита, +ЕД, −урон</td></tr>
+<tr><td>Дуэльная</td><td>+атака, +инициатива, −защита</td></tr>
+<tr><td>Окопная</td><td>+защита, +атака, −инициатива</td></tr>
+<tr><td>Кулачная</td><td>+урон, +защита, +инициатива</td></tr></table>
+</div></div>
+</div>
+
+<!--
+Пересборка PDF:
+  pandoc -f markdown -t html5 --standalone --metadata title="Аврора — лист персонажа" \
+    -o /tmp/sheet.html character-sheet.md
+  chromium --headless --no-sandbox --no-pdf-header-footer \
+    --print-to-pdf=character-sheet.pdf /tmp/sheet.html
+-->

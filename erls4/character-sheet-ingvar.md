@@ -1,0 +1,197 @@
+<style>
+@page { size: A4; margin: 10mm 10mm 11mm 10mm; }
+* { box-sizing: border-box; }
+body { font-family: 'DejaVu Sans', sans-serif; font-size: 8.4pt; line-height: 1.24; color: #151515; margin: 0; }
+.page { page-break-after: always; }
+.page:last-child { page-break-after: auto; }
+h1, h2, h3, p, ul { margin: 0; }
+.masthead { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2px solid #151515; padding-bottom: 2mm; margin-bottom: 3mm; }
+.brand { font-size: 20pt; font-weight: 800; letter-spacing: 2.5px; line-height: 1; }
+.brand span { display: block; font-size: 7pt; font-weight: 400; letter-spacing: 1.6px; text-transform: uppercase; color: #555; margin-top: 1.2mm; }
+.doc { text-align: right; font-size: 11pt; font-weight: 700; }
+.doc span { display: block; font-size: 7pt; font-weight: 400; letter-spacing: 1px; color: #555; text-transform: uppercase; margin-top: 1.2mm; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 0.6px solid #8a8a8a; padding: 1mm 1.6mm; vertical-align: middle; }
+th { background: #ececec; font-weight: 700; text-align: left; font-size: 7.6pt; }
+.id td { height: 7.4mm; }
+.id th { width: 1%; white-space: nowrap; background: #f4f4f4; }
+.params { margin-top: 3mm; }
+.params td.param { width: 25%; text-align: center; padding: 1.2mm 1.5mm 1.6mm; }
+.pname { font-weight: 800; font-size: 9pt; letter-spacing: 0.6px; }
+.psub { font-size: 6.6pt; color: #666; margin-top: 0.4mm; }
+.pval { height: 9.4mm; border: 1.2px solid #222; border-radius: 2px; margin: 1.2mm auto 1mm; width: 70%; font-size: 13pt; font-weight: 700; line-height: 9mm; }
+.pmod { font-size: 7.4pt; color: #333; margin-bottom: 1.2mm; }
+.asp { font-size: 7.2pt; color: #333; }
+.derived td { height: 6.6mm; }
+.derived th { background: #f4f4f4; white-space: nowrap; width: 1%; }
+.derived .f { display: block; font-size: 6.2pt; font-weight: 400; color: #777; }
+.note { font-size: 6.8pt; color: #666; margin-top: 1.2mm; }
+.cols2 { display: flex; gap: 3mm; }
+.cols2 > div { width: calc(50% - 1.5mm); }
+.sec { margin-top: 2.2mm; }
+.sechead { font-weight: 800; font-size: 9pt; letter-spacing: 0.7px; text-transform: uppercase; border-bottom: 1.2px solid #222; padding-bottom: 0.8mm; margin-bottom: 1.6mm; }
+.skills td { height: 4mm; padding: 0.35mm 1.4mm; }
+.skills th { padding: 0.8mm 1.4mm; }
+.skills td.c { text-align: center; color: #444; font-size: 7pt; }
+.skills tr.grp td { background: #dcdcdc; font-weight: 800; font-size: 7.6pt; letter-spacing: 0.5px; height: 5mm; }
+.skills td.name { font-size: 7.7pt; }
+.weap td, .armor td, .rep td, .money td { height: 5.6mm; }
+.weap td.c, .armor td.c, .rep td.c { text-align: center; }
+.val { font-weight: 700; }
+.filled { background: #f7f7f7; }
+.traits table td { height: 6mm; }
+.cb { display: inline-block; width: 3.6mm; height: 3.6mm; border: 0.8px solid #444; vertical-align: -0.7px; margin-right: 1mm; }
+.long { font-size: 6.6pt; color: #555; }
+.dossier h2 { font-size: 10.5pt; margin: 0 0 1.4mm; padding-bottom: 0.7mm; border-bottom: 1.2px solid #222; letter-spacing: 0.4px; }
+.dossier p { margin-bottom: 1.8mm; text-align: justify; }
+.dossier ul { margin: 0 0 2mm; padding-left: 4.5mm; }
+.dossier li { margin-bottom: 0.6mm; }
+.box { border: 0.8px solid #555; border-radius: 2px; padding: 2mm 2.6mm; margin-bottom: 2.4mm; }
+.quote { font-style: italic; color: #333; border-left: 2px solid #999; padding-left: 3mm; margin: 1.5mm 0 2.4mm; }
+.tag { display: inline-block; font-size: 6.4pt; color: #fff; background: #444; padding: 0.2mm 1.2mm; border-radius: 1.5px; vertical-align: 1px; }
+</style>
+
+<div class="page">
+<div class="masthead"><div class="brand">АВРОРА<span>досье Контроля · NPC</span></div><div class="doc">Ингвар Одинович Иванов<span>комиссар · меч на поясе</span></div></div>
+<table class="id"><colgroup><col style="width:16%"><col style="width:34%"><col style="width:15%"><col style="width:35%"></colgroup>
+<tr><th>Имя</th><td class="val">Ингвар Одинович Иванов</td><th>Возраст</th><td class="val">выглядит на 38 · ~425</td></tr>
+<tr><th>Происхождение</th><td class="val">Земля, Поморье · 2-я волна</td><th>Фракция</th><td class="val">Контроль</td></tr>
+<tr><th>Роль</th><td class="val">Комиссар · советник · лонгер</td><th>Игрок</th><td class="val">NPC (лист — по разрешению мастера)</td></tr>
+</table>
+<table class="params filled"><tr>
+<td class="param"><div class="pname">ОФП</div><div class="psub">сила · здоровье</div><div class="pval">8</div><div class="pmod">модификатор <b>0</b></div><div class="asp">сила <b>+1</b> · здоровье <b>0</b></div></td>
+<td class="param"><div class="pname">ЛОВКОСТЬ</div><div class="psub">подвижность · меткость</div><div class="pval">9</div><div class="pmod">модификатор <b>+1</b></div><div class="asp">подвижность <b>+1</b> · меткость <b>0</b></div></td>
+<td class="param"><div class="pname">РАЗУМ</div><div class="psub">интеллект · память</div><div class="pval">10</div><div class="pmod">модификатор <b>+1</b></div><div class="asp">интеллект <b>+1</b> · память <b>0</b></div></td>
+<td class="param"><div class="pname">ДУХ</div><div class="psub">воля · интуиция</div><div class="pval">9</div><div class="pmod">модификатор <b>+1</b></div><div class="asp">воля <b>+1</b> · интуиция <b>0</b></div></td>
+</tr></table>
+<table class="derived sec"><tr><th>ХП</th><td class="val">16</td><th>ВЫН</th><td class="val">16</td><th>ЕД</th><td class="val">8</td></tr>
+<tr><th>Инициатива</th><td class="val">к6 + 5</td><th>Защита</th><td class="val">6 <span class="long">(8 с парированием)</span></td><th>Груз, кг</th><td class="val">40</td></tr></table>
+<div class="note">Сумма параметров 36 — для лонгера-комиссара это норма. Регенерация 5 ХП в раунд; смерть — только от обезглавливания.</div>
+<div class="sec"><div class="sechead">Навыки</div></div>
+<div class="cols2">
+<div><table class="skills"><tr><th style="width:60%">Навык</th><th style="width:12%">Ур</th><th style="width:14%">Бонус</th><th style="width:14%">Пар</th></tr>
+<tr class="grp"><td colspan="4">Бой</td></tr>
+<tr><td class="name">Холодное: клинок</td><td class="c">GM</td><td class="c val">+9</td><td class="c">Лов</td></tr>
+<tr><td class="name">Стрельба: длинноствол</td><td class="c">Expert</td><td class="c val">+4</td><td class="c">Лов</td></tr>
+<tr><td class="name">Стрельба: револьвер</td><td class="c">Adv</td><td class="c val">+3</td><td class="c">Лов</td></tr>
+<tr><td class="name">Рукопашный бой</td><td class="c">Basic</td><td class="c val">+1</td><td class="c">ОФП</td></tr>
+<tr class="grp"><td colspan="4">Знание и ремесло</td></tr>
+<tr><td class="name">Кодекс Контроля</td><td class="c">Master</td><td class="c val">+6</td><td class="c">Раз</td></tr>
+<tr><td class="name">Военное дело</td><td class="c">Expert</td><td class="c val">+4</td><td class="c">Раз</td></tr>
+<tr><td class="name">Торговля и бюрократия</td><td class="c">Adv</td><td class="c val">+3</td><td class="c">Раз</td></tr>
+<tr><td class="name">Медицина</td><td class="c">Adv</td><td class="c val">+3</td><td class="c">Раз</td></tr>
+<tr><td class="name">Первая помощь</td><td class="c">Adv</td><td class="c val">+3</td><td class="c">Раз</td></tr>
+<tr><td class="name">Инженерия</td><td class="c">Basic</td><td class="c val">+1</td><td class="c">Раз</td></tr>
+<tr><td class="name">Биология Авроры</td><td class="c">Basic</td><td class="c val">+2</td><td class="c">Раз</td></tr>
+<tr class="grp"><td colspan="4">Люди и дорога</td></tr>
+<tr><td class="name">Убеждение</td><td class="c">Expert</td><td class="c val">+4</td><td class="c">Дух</td></tr>
+<tr><td class="name">Лидерство</td><td class="c">Expert</td><td class="c val">+4</td><td class="c">Дух</td></tr>
+<tr><td class="name">Эмпатия</td><td class="c">Adv</td><td class="c val">+3</td><td class="c">Дух</td></tr>
+<tr><td class="name">Запугивание</td><td class="c">Adv</td><td class="c val">+3</td><td class="c">Дух</td></tr>
+<tr><td class="name">Скрытность</td><td class="c">Basic</td><td class="c val">+2</td><td class="c">Лов</td></tr>
+<tr><td class="name">Марш</td><td class="c">Basic</td><td class="c val">+1</td><td class="c">ОФП</td></tr>
+<tr><td class="name">Сенсорика</td><td class="c">Basic</td><td class="c val">+1</td><td class="c">Дух</td></tr>
+<tr><td class="name">Верховая езда</td><td class="c">Basic</td><td class="c val">+1</td><td class="c">ОФП</td></tr>
+<tr><td class="name">Гребля и парус</td><td class="c">Basic</td><td class="c val">+1</td><td class="c">ОФП</td></tr>
+</table></div>
+<div>
+<div class="sechead">Снаряжение</div>
+<table class="weap"><tr><th>Оружие</th><th>Урон</th><th>ЕД</th><th>Особое</th></tr>
+<tr><td>Меч комиссарский</td><td class="c">2d6+3</td><td class="c">2</td><td class="c">парирование +2</td></tr>
+<tr><td>Револьвер (старый)</td><td class="c">2d6+1</td><td class="c">2</td><td class="c">6 патронов</td></tr>
+<tr><td>Кулак / рукоять</td><td class="c">1d3+1</td><td class="c">2</td><td class="c">—</td></tr></table>
+<table class="armor" style="margin-top:2mm"><tr><th>Броня</th><th>Урон −</th><th>Штраф</th></tr>
+<tr><td>Стёганка под плащом</td><td class="c">1</td><td class="c">—</td></tr></table>
+<div class="sechead">Репутация</div>
+<table class="rep"><tr><th>Фракция</th><th style="width:18%">Знач.</th></tr>
+<tr><td>Лэндинг</td><td class="c val">+3</td></tr>
+<tr><td>Техноград</td><td class="c val">+1</td></tr>
+<tr><td>Синдикат фермеров</td><td class="c val">+2</td></tr>
+<tr><td>Контроль</td><td class="c val">+5</td></tr>
+<tr><td>Вольники</td><td class="c val">−2</td></tr>
+<tr><td><b>Розыск</b></td><td class="c val">0</td></tr></table>
+<div class="sechead sec">Деньги</div>
+<table class="money"><tr><th>Трудочасы</th><th>Рубли</th><th>Кроксы</th><th>Дост.</th></tr>
+<tr><td class="c val">0</td><td class="c val">0</td><td class="c val">3</td><td class="c val">1</td></tr></table>
+</div></div>
+<div class="sechead sec">Черты</div>
+<div class="cols2">
+<div><table class="traits"><tr><th>Положительные</th></tr>
+<tr><td><b>Протокол Мелландера.</b> Не стареет. Регенерация 5 ХП в раунд. Смерть — только от обезглавливания; при насильственной смерти воскресает в 20–22 года.</td></tr>
+<tr><td><b>Кодекс.</b> 1 раз за сессию его совет оказывается точным: +1 к одному броску или честная подсказка.</td></tr>
+<tr><td><b>Спокойствие.</b> +1 к укидкам Воли.</td></tr></table></div>
+<div><table class="traits"><tr><th>Отрицательные</th></tr>
+<tr><td><b>Пансион.</b> Денег нет: еда и ночлег от Лэндинга, покупки выше Достатка 1 недоступны.</td></tr>
+<tr><td><b>Не может не вмешаться.</b> Обязан давать советы. Иногда это −1, когда лучше промолчать.</td></tr>
+<tr><td><b>Меч на виду.</b> У вольников и в Технограде это метка Контроля: −1 к социальным броскам в этих местах.</td></tr></table></div>
+</div>
+<div class="note">Бонус = уровень + модификатор параметра. Для лонгеров ограничение навыка параметром не действует — поэтому клинок Grandmaster при Ловкости 9.</div>
+</div>
+
+<div class="page dossier">
+<div class="masthead"><div class="brand">ИНГВАР<span>досье · страница 2</span></div><div class="doc">Кто он и как его играть<span>не давайте игрокам его убить</span></div></div>
+<div class="cols2">
+<div>
+<h2>Кто он</h2>
+<p>Родился в 1613 году в Холмогорах, на Поморье. Корабельный плотник: тёс, смола, солёный ветер. Убит ножом в архангельской драке в 1640-м — и через минуту встал. Через год его нашёл человек с мечом и предложил выбор, который был не выбором.</p>
+<p>Четыре века — корабли, войны, Сибирь, Европа, снова корабли. Он никогда не был наверху: всегда «при деле» — при плотницкой, при обозе, при штабе. В программу колонизации попал со второй волной и с тех пор ходит по фронтиру: советует, чинит лодки, учит молодых не умирать зря.</p>
+<p>На Авроре его зовут «Иванов», и он не спорит. Отчество — «Одинович» — тихая шутка: отца звали Одд, а писарь Лэндинга записал «Один». Ингвар считает, что так даже честнее.</p>
+<h2>Как он себя ведёт</h2>
+<ul>
+<li>Говорит коротко. Часто отвечает вопросом на вопрос.</li>
+<li>Никогда не приказывает — предлагает: «А если вот так?»</li>
+<li>Никогда не садится спиной к двери.</li>
+<li>Точит меч, когда думает. Это не угроза, это привычка.</li>
+<li>Помнит всех по именам. Люди от этого нервничают — и это работает.</li>
+<li>Не врёт. Может недоговорить — но не соврёт.</li>
+</ul>
+<div class="quote">— Крокодилы не несутся. А вода-то тут при чём?<br><span style="font-size:7pt;font-style:normal;color:#777">— комиссар Вельт, его коллега, в сцене «Крокодил не несётся»</span></div>
+</div>
+<div>
+<h2>Три секрета</h2>
+<ul>
+<li><b>Он боится забыть, зачем всё это.</b> Четыреста лет — и всё меньше помнит лица. Ведёт список имён тех, кого не спас; никому не показывает.</li>
+<li><b>Он уже терял голову.</b> Один раз, в 1871-м, под Парижем. Кто вернул — не говорит. С тех пор спит у стены.</li>
+<li><b>Он знает про Младшую сестру больше, чем говорит.</b> Не точно, но достаточно, чтобы не отправлять туда экспедиции.</li>
+</ul>
+<h2>Боевая тактика</h2>
+<table><tr><th>Приём</th><th>Механика</th></tr>
+<tr><td>Парирование</td><td>1 ЕД, +2 к Защите до конца раунда</td></tr>
+<tr><td>Ответный удар</td><td>если атакующий провалил встречный бросок — свободная атака</td></tr>
+<tr><td>Обезоруживание</td><td>встречный с −2; успех — оружие в сторону</td></tr>
+<tr><td>Плашмя</td><td>урон 1d6, не убивает; для кабацких разборок</td></tr>
+<tr><td>Против огнестрела</td><td>укрытие, сближение, дым, толпа. Не стоит на линии огня</td></tr>
+</table>
+<p>Он не бьёт первым. Он вообще старается не бить. Но если дошло — бьёт один раз и по делу. Раненный, он не замечает раны: регенерация. Это пугает сильнее любого крика.</p>
+<h2>Как играть (если мастер разрешит)</h2>
+<p>По канону комиссар — NPC: игрокам его не дают. Если всё-таки берёте:</p>
+<ul>
+<li>возьмите <b>29 очков</b> параметров, а не 36;</li>
+<li>уберите «Протокол Мелландера» — останется просто очень опытный человек;</li>
+<li>оставьте «Кодекс» и «Пансион»: это и есть роль;</li>
+<li>ограничение навыка параметром снова действует.</li>
+</ul>
+<h2>Крючки</h2>
+<ul>
+<li><b>Список имён.</b> В нём есть фамилия одного из игроков — и Ингвар это знает.</li>
+<li><b>Арфист.</b> Он ищет молодого арфиста для дела, о котором не расскажет сразу.</li>
+<li><b>Вельт.</b> Его коллега и, возможно, ученик. Если Вельт исчезнет — Ингвар пойдёт искать.</li>
+<li><b>Младшая сестра.</b> Он единственный, кто может однажды сказать: «Туда не летайте». И не объяснить.</li>
+</ul>
+</div></div>
+<div class="sechead sec">Снаряжение</div>
+<ul>
+<li><b>Меч комиссарский</b> — клинок 2d6+3, парирование +2. Старый, но не тупой.</li>
+<li><b>Револьвер</b> — 2d6+1, шесть патронов. Носит в котомке, не на поясе.</li>
+<li><b>Стёганка</b> под плащом — броня 1, без штрафа.</li>
+<li><b>Кодекс</b> — тетрадь в клеёнке. Не артефакт, но потерять её хуже, чем голову.</li>
+<li><b>Дорожный плащ, котомка, точильный камень, фляга, трут, верёвка 10 м, одеяло, ложка.</b></li>
+<li><b>Три крокса</b> «на карманные» — больше ему не дают.</li>
+<li><b>Земная зажигалка</b> — работает, не чинится. Единственный артефакт в кармане.</li>
+</ul>
+<div class="box"><b>Правила лонгера коротко.</b> Не стареет · регенерация 5 ХП в раунд · смерть только от обезглавливания · при насильственной смерти воскресает в 20–22 года · исключений нет. Если игроки нападают на него — это не бой, а сцена ужаса. Обезглавить может только другой лонгер или очень хорошо подготовленная засада (минимум 5 бойцов, сети, ловушки).</div>
+</div>
+
+<!--
+Пересборка: ./build-pdf.sh character-sheet-ingvar.md character-sheet-ingvar.pdf
+-->

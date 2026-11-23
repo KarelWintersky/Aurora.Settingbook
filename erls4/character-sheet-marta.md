@@ -1,0 +1,216 @@
+<style>
+@page { size: A4; margin: 10mm 10mm 11mm 10mm; }
+* { box-sizing: border-box; }
+body { font-family: 'DejaVu Sans', sans-serif; font-size: 8.4pt; line-height: 1.24; color: #151515; margin: 0; }
+.page { page-break-after: always; }
+.page:last-child { page-break-after: auto; }
+h1, h2, h3, p, ul { margin: 0; }
+.masthead { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2px solid #151515; padding-bottom: 2mm; margin-bottom: 3mm; }
+.brand { font-size: 20pt; font-weight: 800; letter-spacing: 2.5px; line-height: 1; }
+.brand span { display: block; font-size: 7pt; font-weight: 400; letter-spacing: 1.6px; text-transform: uppercase; color: #555; margin-top: 1.2mm; }
+.doc { text-align: right; font-size: 11pt; font-weight: 700; }
+.doc span { display: block; font-size: 7pt; font-weight: 400; letter-spacing: 1px; color: #555; text-transform: uppercase; margin-top: 1.2mm; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 0.6px solid #8a8a8a; padding: 0.9mm 1.5mm; vertical-align: middle; }
+th { background: #ececec; font-weight: 700; text-align: left; font-size: 7.6pt; }
+.id td { height: 7.2mm; }
+.id th { width: 1%; white-space: nowrap; background: #f4f4f4; }
+.params { margin-top: 3mm; }
+.params td.param { width: 25%; text-align: center; padding: 1.2mm 1.5mm 1.6mm; }
+.pname { font-weight: 800; font-size: 9pt; letter-spacing: 0.6px; }
+.psub { font-size: 6.6pt; color: #666; margin-top: 0.4mm; }
+.pval { height: 9.2mm; border: 1.2px solid #222; border-radius: 2px; margin: 1.1mm auto 0.9mm; width: 70%; font-size: 13pt; font-weight: 700; line-height: 8.8mm; }
+.pmod { font-size: 7.4pt; color: #333; margin-bottom: 1mm; }
+.asp { font-size: 7.1pt; color: #333; }
+.derived td { height: 6.4mm; }
+.derived th { background: #f4f4f4; white-space: nowrap; width: 1%; }
+.derived .f { display: block; font-size: 6.1pt; font-weight: 400; color: #777; }
+.note { font-size: 6.8pt; color: #666; margin-top: 1.2mm; }
+.cols2 { display: flex; gap: 3mm; }
+.cols2 > div { width: calc(50% - 1.5mm); }
+.sec { margin-top: 2.6mm; }
+.sechead { font-weight: 800; font-size: 9pt; letter-spacing: 0.7px; text-transform: uppercase; border-bottom: 1.2px solid #222; padding-bottom: 0.8mm; margin-bottom: 1.5mm; }
+.val { font-weight: 700; }
+.filled { background: #f7f7f7; }
+.skills td { height: 4.4mm; padding: 0.4mm 1.4mm; }
+.skills th { padding: 0.8mm 1.4mm; }
+.skills td.c { text-align: center; color: #444; font-size: 7pt; }
+.weap td, .armor td, .rep td, .money td { height: 6mm; }
+.weap td.c, .armor td.c, .rep td.c { text-align: center; }
+.traits table td { height: 6mm; }
+.dossier h2 { font-size: 10.5pt; margin: 0 0 1.4mm; padding-bottom: 0.7mm; border-bottom: 1.2px solid #222; letter-spacing: 0.4px; }
+.dossier p { margin-bottom: 1.8mm; text-align: justify; }
+.dossier ul { margin: 0 0 2mm; padding-left: 4.5mm; }
+.dossier li { margin-bottom: 0.6mm; }
+.box { border: 0.8px solid #555; border-radius: 2px; padding: 2mm 2.6mm; margin-bottom: 2.4mm; }
+.quote { font-style: italic; color: #333; border-left: 2px solid #999; padding-left: 3mm; margin: 1.5mm 0 2.4mm; }
+.round { border: 0.7px solid #777; border-radius: 2px; margin-bottom: 1.8mm; }
+.round .rh { background: #e6e6e6; font-weight: 800; font-size: 8.2pt; padding: 0.9mm 2mm; border-bottom: 0.7px solid #777; letter-spacing: 0.3px; }
+.round table { font-size: 7.3pt; }
+.round td, .round th { padding: 0.55mm 1.3mm; }
+.round td.c { text-align: center; }
+.crit { color: #8a1c1c; font-weight: 700; }
+.small { font-size: 7.2pt; }
+</style>
+
+<div class="page">
+<div class="masthead"><div class="brand">АВРОРА<span>лист персонажа · Синдикат</span></div><div class="doc">Марта<span>16 лет · дочь крокодиловода</span></div></div>
+<table class="id"><colgroup><col style="width:16%"><col style="width:34%"><col style="width:15%"><col style="width:35%"></colgroup>
+<tr><th>Имя</th><td class="val">Марта Кротова</td><th>Возраст</th><td class="val">16</td></tr>
+<tr><th>Происхождение</th><td class="val">Фермер Синдиката</td><th>Фракция</th><td class="val">Синдикат фермеров</td></tr>
+<tr><th>Игрок</th><td class="val">—</td><th>Очки</th><td class="val">20 = 4 + 16</td></tr>
+</table>
+<table class="params filled"><tr>
+<td class="param"><div class="pname">ОФП</div><div class="psub">сила · здоровье</div><div class="pval">6</div><div class="pmod">модификатор <b>−1</b></div><div class="asp">сила <b>+1</b> · здоровье <b>0</b></div></td>
+<td class="param"><div class="pname">ЛОВКОСТЬ</div><div class="psub">подвижность · меткость</div><div class="pval">6</div><div class="pmod">модификатор <b>−1</b></div><div class="asp">подвижность <b>+1</b> · меткость <b>0</b></div></td>
+<td class="param"><div class="pname">РАЗУМ</div><div class="psub">интеллект · память</div><div class="pval">5</div><div class="pmod">модификатор <b>−1</b></div><div class="asp">интеллект <b>+1</b> · память <b>0</b></div></td>
+<td class="param"><div class="pname">ДУХ</div><div class="psub">воля · интуиция</div><div class="pval">3</div><div class="pmod">модификатор <b>−2</b></div><div class="asp">воля <b>0</b> · интуиция <b>−1</b></div></td>
+</tr></table>
+<table class="derived sec"><tr><th>ХП</th><td class="val">14</td><th>ВЫН</th><td class="val">12</td><th>ЕД</th><td class="val">7</td></tr>
+<tr><th>Инициатива</th><td class="val">к6 + 4</td><th>Защита</th><td class="val">4 <span class="small">(3 в куртке)</span></td><th>Груз, кг</th><td class="val">30</td></tr></table>
+<div class="note">ХП 8+6+0 · ВЫН 2×6+0 · ЕД 3+3+1 · Инициатива к6+3+1 · Защита 4+(−1)+1; крокодилья куртка даёт −1.</div>
+<div class="cols2 sec">
+<div>
+<div class="sechead">Навыки</div>
+<table class="skills"><tr><th style="width:52%">Навык</th><th style="width:14%">Ур</th><th style="width:16%">Бонус</th><th style="width:18%">Пар</th></tr>
+<tr><td>Стрельба: длинноствол</td><td class="c">Adv</td><td class="c val">+1</td><td class="c">Лов</td></tr>
+<tr><td>Крокодиловодство</td><td class="c">Adv</td><td class="c val">+1</td><td class="c">Раз</td></tr>
+<tr><td>Скрытность</td><td class="c">Basic</td><td class="c val">0</td><td class="c">Лов</td></tr>
+<tr><td>Первая помощь</td><td class="c">Basic</td><td class="c val">0</td><td class="c">Раз</td></tr>
+<tr><td>Верховая езда</td><td class="c">Basic</td><td class="c val">0</td><td class="c">ОФП</td></tr>
+<tr><td>Торговля</td><td class="c">Nov</td><td class="c val">0</td><td class="c">Раз</td></tr>
+<tr><td>Винокурение</td><td class="c">Nov</td><td class="c val">0</td><td class="c">Раз</td></tr>
+<tr><td colspan="4" class="c">Остальное — нет навыка (−4 + мод. параметра)</td></tr>
+</table>
+<div class="note">Бонус = уровень + модификатор параметра. У неё меткость 0 и Ловкость 6 (−1): Advanced (+2) даёт итого +1.</div>
+<div class="sechead sec">Репутация</div>
+<table class="rep"><tr><th>Фракция</th><th style="width:22%">Знач.</th><th>Заметки</th></tr>
+<tr><td>Синдикат фермеров</td><td class="c val">+2</td><td>своя, дочь хозяина</td></tr>
+<tr><td>Лэндинг</td><td class="c val">0</td><td>—</td></tr>
+<tr><td>Техноград</td><td class="c val">0</td><td>брат работает</td></tr>
+<tr><td>Контроль</td><td class="c val">0</td><td>—</td></tr>
+<tr><td>Вольники</td><td class="c val">−1</td><td>«фермерская»</td></tr>
+<tr><td><b>Розыск</b></td><td class="c val">0</td><td>—</td></tr></table>
+</div>
+<div>
+<div class="sechead">Снаряжение</div>
+<table class="weap"><tr><th>Оружие</th><th>Урон</th><th>ЕД</th><th>Патроны</th></tr>
+<tr><td>Дробовик отца</td><td class="c">2d6+2</td><td class="c">2</td><td class="c">8</td></tr>
+<tr><td>Нож</td><td class="c">1d6+1</td><td class="c">2</td><td class="c">—</td></tr></table>
+<table class="armor" style="margin-top:2mm"><tr><th>Броня</th><th>Урон −</th><th>Штраф</th></tr>
+<tr><td>Крокодилья куртка</td><td class="c">2</td><td class="c">−1 Лов</td></tr></table>
+<div class="note">Дробовик: до 15 м — 2d6+2, дальше — 1d6. В упор +2 к попаданию. Перезарядка 3 ЕД. Нож без навыка: попадание к6−5.</div>
+<div class="sechead sec">При себе</div>
+<div class="box small">8 патронов · нож в чехле · фляга · верёвка 5 м · кусок копчёного мяса · 35 кроксов и 10 рублей в тряпице · гребешок из крокодильей кости (подарок отца).</div>
+<div class="sechead">Черты</div>
+<table class="traits"><tr><th>Положительная</th><th>Отрицательная</th></tr>
+<tr><td><b>Нюх на неприятности.</b> +1 к укидкам, когда рядом опасность.</td><td><b>Долг семье.</b> Не может уйти, пока ферма в опасности.</td></tr></table>
+<div class="sechead sec">Деньги</div>
+<table class="money"><tr><th>Трудочасы</th><th>Рубли</th><th>Кроксы</th><th>Дост.</th></tr>
+<tr><td class="c val">0</td><td class="c val">10</td><td class="c val">35</td><td class="c val">2</td></tr></table>
+</div></div>
+<div class="cols2 sec">
+<div><div class="sechead">Связи</div>
+<table class="rep"><tr><th>Кто</th><th>Кем приходится</th></tr>
+<tr><td>Отец, Савелий</td><td>хозяин фермы, ~300 аллигаторов; болен</td></tr>
+<tr><td>Брат</td><td>сменный мастер в Технограде, редко пишет</td></tr>
+<tr><td>Корней, 58</td><td>работник, знает её с рождения</td></tr>
+<tr><td>Тимка, 11</td><td>младший брат; бегает быстрее всех</td></tr></table></div>
+<div><div class="sechead">Транспорт и животные</div>
+<table class="rep"><tr><th>Что</th><th>Состояние</th></tr>
+<tr><td>Сирруф (семейный)</td><td>приручён с яйца, знает Марту</td></tr>
+<tr><td>Лодка-плоскодонка</td><td>для озера, без мотора</td></tr></table></div>
+</div>
+</div>
+
+<div class="page dossier">
+<div class="masthead"><div class="brand">МАРТА<span>досье · страница 2</span></div><div class="doc">Кто она и как её играть<span>пятнадцать лет — уже хозяйка</span></div></div>
+<div class="cols2">
+<div>
+<h2>Кто она</h2>
+<p>Старшая дочь на ферме «Тихий плёс». Мать умерла прошлой зимой, отец четвёртый день лежит с распухшей рукой, брат уехал в Техноград за деньгами и не вернулся. Формально хозяйка — отец. Фактически хозяйка — она: кормит, чистит пруды, считает корм, гоняет Тимку от воды.</p>
+<p>Читать и считать выучилась сама, по отцовской тетради. Считает лучше отца, но не спорит с ним при людях. Знает каждого крокодила в нижних прудах если не по имени, то по шрамам.</p>
+<p>Ей шестнадцать. В Синдикате это взрослый человек: может владеть фермой, выйти замуж, отвечать перед ополчением. Но за столом с незнакомыми мужчинами она всё равно садится спиной к стене — как отец.</p>
+<h2>Характер</h2>
+<ul>
+<li>Упрямая. Считает до трёх, потом делает.</li>
+<li>Не плачет при чужих. Плачет в загоне, где никто не видит.</li>
+<li>Верит в счёт, в воду и в то, что крокодил всегда голоден.</li>
+<li>Не умеет торговаться с городскими — те говорят быстро и непонятно.</li>
+<li>Боится пожара: коптильня деревянная, а вода далеко.</li>
+</ul>
+<div class="quote">— Крокодил не несётся не от воды, — сказала бы она. — Он не несётся от людей.</div>
+</div>
+<div>
+<h2>Что умеет и чего не умеет</h2>
+<p><b>Умеет:</b> читать воду и зверя, стрелять из отцовского дробовика, держаться в седле, считать корм и деньги, молчать, когда надо.</p>
+<p><b>Не умеет:</b> драться ножом (нет навыка, −5), врать убедительно, говорить с начальством, чинить механизмы, лечить по-настоящему.</p>
+<p>Это не «слабый персонаж». Это персонаж, который побеждает подготовкой: загоном, расстоянием, укрытием и тем, что она знает ферму лучше любого бандита.</p>
+<h2>Крючки</h2>
+<ul>
+<li><b>Арфистериум.</b> Если она произведёт впечатление на комиссара — её позовут учиться. Отец будет против.</li>
+<li><b>Устин.</b> Он запомнил её лицо. Через сессию вернётся.</li>
+<li><b>Брат.</b> Почему он не вернулся из Технограда?</li>
+<li><b>Долг.</b> 200 кроксов под 10 % в неделю — бумага лежит в отцовском ящике.</li>
+<li><b>Тимка.</b> Он видел, кто открыл шлюз. И молчит.</li>
+</ul>
+<h2>Как играть</h2>
+<p>Не делайте из неё героя. Она не бросается на пятерых. Она отступает, перезаряжает, зовёт Корнея, открывает шлюз, стреляет из-за жерди. Если игрок ведёт её как взрослого ветерана — она умрёт в первой сессии, и это будет честно.</p>
+<p>Её сила — не в кубиках, а в том, что она знает: где брод, где жердь, где крокодил, где Устин не пройдёт.</p>
+</div></div>
+<div class="box"><b>Прогрессия.</b> Она может расти: 1 опыт в навыки и 1 в параметры за сессию. Параметр 3→4 стоит 4 опыта, 5→6 — 6. Крокодиловодство уже Advanced; следующий шаг — Expert, но для него нужен Разум 7–8, а у неё 5. Придётся учиться, а не только работать.</div>
+</div>
+
+<div class="page">
+<div class="masthead"><div class="brand">ПРОВЕРКА БОЕМ<span>Марта против «Ржавого»</span></div><div class="doc">4 раунда · 2 попадания · 1 царапина<span>учебный протокол</span></div></div>
+<p class="small" style="margin-bottom:2.4mm">Вечер, загон у нижних прудов. Марта проверяет воду; один из людей Устина, «Ржавый», обходит дом с револьвером — «сделать внушение». Дистанция 12 м (2 зоны). Жерди загона дают Марте укрытие +1. Дробовик заряжен, в кармане 7 патронов. У Ржавого 6 патронов и нож.</p>
+<table style="margin-bottom:2.6mm"><tr><th>Кто</th><th>ХП</th><th>ЕД</th><th>Иниц.</th><th>Защита</th><th>Оружие</th></tr>
+<tr><td>Марта</td><td class="c">14</td><td class="c">7</td><td class="c">к6+4</td><td class="c">3 (+1 укрытие)</td><td class="c">дробовик к6+1, 2d6+2</td></tr>
+<tr><td>Ржавый</td><td class="c">17</td><td class="c">6</td><td class="c">к6+3</td><td class="c">4</td><td class="c">револьвер к6+1, 2d6+1 · нож к6+3, 1d6+1</td></tr></table>
+
+<div class="round"><div class="rh">Раунд 1 · 12 м · инициатива: Марта 9, Ржавый 6</div>
+<table><tr><th style="width:14%">Кто</th><th style="width:24%">Действие</th><th style="width:8%">ЕД</th><th style="width:27%">Бросок</th><th>Результат</th></tr>
+<tr><td>Марта</td><td>Прицел + выстрел</td><td class="c">3</td><td>к6+1+1 → <b>3+2=5</b> против Защиты 4</td><td><b>Попадание.</b> Урон 2d6+2 = 4+4+2 = <b>10</b>. Ржавый 17→7: <span class="crit">тяжёлое</span> (−2, 100 хитов ранений)</td></tr>
+<tr><td>Марта</td><td>Перезарядка</td><td class="c">3</td><td>—</td><td>Осталось 1 ЕД</td></tr>
+<tr><td>Ржавый</td><td>Укидка на сознание</td><td class="c">—</td><td>к12 ≤ 9−2 = 7 → выпало 4</td><td>Держится на ногах</td></tr>
+<tr><td>Ржавый</td><td>Выстрел</td><td class="c">2</td><td>к6+1−2 → <b>5−1=4</b> против 3+1=4</td><td><b>Равенство — царапина:</b> 1 урон, без ранения. Марта 14→13</td></tr>
+<tr><td>Ржавый</td><td>Отход за сарай</td><td class="c">2</td><td>—</td><td>Укрытие +2, осталось 2 ЕД</td></tr></table>
+<p class="small" style="padding:1.2mm 2mm 1.6mm">Итог: Марта 13 ХП, Ржавый 7 ХП и −2. <b>Урок:</b> на дистанции дробовик страшнее револьвера, а «равенство = царапина» спасает от случайной смерти.</p>
+</div>
+
+<div class="round"><div class="rh">Раунд 2 · сближение · инициатива: Марта 8, Ржавый 5</div>
+<table><tr><th style="width:14%">Кто</th><th style="width:24%">Действие</th><th style="width:8%">ЕД</th><th style="width:27%">Бросок</th><th>Результат</th></tr>
+<tr><td>Марта</td><td>Шаг к сараю</td><td class="c">2</td><td>—</td><td>Дистанция 12 м</td></tr>
+<tr><td>Марта</td><td>Прицел + выстрел</td><td class="c">3</td><td>к6+1+1 → <b>2+2=4</b> против 4+2=6</td><td><b>Промах:</b> укрытие съело пулю; на перезарядку осталось 2 ЕД</td></tr>
+<tr><td>Ржавый</td><td>Бросает револьвер, выходит из укрытия</td><td class="c">1</td><td>—</td><td>Понимает: на дистанции не выиграть</td></tr>
+<tr><td>Ржавый</td><td>Сближение + удар ножом</td><td class="c">4</td><td>к6+3−2 → <b>4+1=5</b> против к6+0 → 2</td><td><b>Попадание.</b> Урон 1d6+1 = <b>4</b>. Марта 13→9: среднее (−1, 40 хитов ранений)</td></tr></table>
+<p class="small" style="padding:1.2mm 2mm 1.6mm">Итог: Марта 9 ХП и −1, Ржавый 7 ХП и −2. <b>Урок:</b> пустой дробовик в ближнем бою — просто палка. Нож у неё — навыка нет, попадание к6−5.</p>
+</div>
+
+<div class="round"><div class="rh">Раунд 3 · вплотную · инициатива: Ржавый 9, Марта 7</div>
+<table><tr><th style="width:14%">Кто</th><th style="width:24%">Действие</th><th style="width:8%">ЕД</th><th style="width:27%">Бросок</th><th>Результат</th></tr>
+<tr><td>Ржавый</td><td>Удар ножом</td><td class="c">2</td><td>к6+3−2 → <b>5+1=6</b> против к6+0 → 1</td><td><b>Попадание.</b> Урон 1d6+1 = <b>3</b>. Марта 9→6: среднее, суммарный штраф −2, 70 хитов</td></tr>
+<tr><td>Ржавый</td><td>Шаг в сторону</td><td class="c">1</td><td>—</td><td>Осталось 3 ЕД</td></tr>
+<tr><td>Марта</td><td>Разрыв дистанции</td><td class="c">2</td><td>—</td><td>Отходит на 10 м</td></tr>
+<tr><td>Марта</td><td>Перезарядка</td><td class="c">3</td><td>—</td><td>Дробовик заряжен, осталось 2 ЕД</td></tr></table>
+<p class="small" style="padding:1.2mm 2mm 1.6mm">Итог: Марта 6 ХП и −2, Ржавый 7 ХП и −2. <b>Урок:</b> ранения складываются. Два средних — это уже −2 на всё, включая стрельбу.</p>
+</div>
+
+<div class="round"><div class="rh">Раунд 4 · развязка · инициатива: Марта 10, Ржавый 4</div>
+<table><tr><th style="width:14%">Кто</th><th style="width:24%">Действие</th><th style="width:8%">ЕД</th><th style="width:27%">Бросок</th><th>Результат</th></tr>
+<tr><td>Марта</td><td>Прицел + выстрел</td><td class="c">3</td><td>к6+1+1−2 → <b>5+0=5</b> против 4</td><td><b>Попадание.</b> Урон 2d6+2 = <b>10</b>. Ржавый 7→−3: тяжёлое, суммарно 20 &gt; 17</td></tr>
+<tr><td>Ржавый</td><td>Укидка на сознание</td><td class="c">—</td><td>к12 ≤ 9−4 = 5 → выпало 8</td><td><b>Без сознания</b></td></tr>
+<tr><td>Марта</td><td>Первая помощь</td><td class="c">3</td><td>к6+0 против сложности 4</td><td>Спасёт — заговорит</td></tr></table>
+<p class="small" style="padding:1.2mm 2mm 1.6mm">Итог: Марта 6 ХП, два средних ранения, 5 патронов. Ржавый жив или мёртв — зависит от того, станет ли она его спасать. <b>Урок:</b> бой решается не силой, а дистанцией, укрытием и перезарядкой.</p>
+</div>
+
+<div class="cols2">
+<div><div class="box"><b>Разбор.</b> Марта выиграла потому, что дралась там, где ей выгодно: на дистанции, из-за жерди, с заряженным дробовиком. Проиграла бы, если бы осталась в ближнем бою: нож у неё — к6−5, а у Ржавого — к6+3.</div></div>
+<div><div class="box"><b>Что дальше.</b> Если Ржавый выжил — он расскажет, что Устин приходил не за долгом, а за землёй у брода. Если умер — у него в кармане найдётся та самая бумага с печатью «вольного порта».</div></div>
+</div>
+<div class="note">Проверка формул: Защита Марты 4+(−1)+1=4, в куртке 3. Укрытие +1. Попадание = к6 + навык + мод. параметра. Равенство = царапина. Ранение = доля от максимума ХП.</div>
+</div>
+
+<!--
+Пересборка: ./build-pdf.sh character-sheet-marta.md character-sheet-marta.pdf
+-->
