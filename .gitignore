@@ -7,5 +7,5 @@ _preview/
 zz.txt
 
 # служебные файлы (локально, не в репозитории)
-erls4/_full.md
+/_full.md
 .idea/

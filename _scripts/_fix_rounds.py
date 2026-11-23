@@ -3,7 +3,7 @@ import re, io, os
 # Файлы лежат в erls4/, скрипт — в _scripts/: работаем относительно корня репозитория.
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "erls4"))
 
-p = "character-sheet-marta.md"
+p = "character-sheet-marta.html"
 s = io.open(p, encoding="utf-8").read()
 
 def repl(start_marker, new_block):

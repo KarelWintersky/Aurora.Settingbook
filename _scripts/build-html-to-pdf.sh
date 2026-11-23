@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Сборка готового HTML-документа в PDF (A4) через печать Chromium.
 # Здесь pandoc не нужен: листы персонажей — уже сверстанный HTML со своим <style>.
-# Использование: ./_scripts/build-html.sh input.html output.pdf
+# Использование: ./_scripts/build-html-to-pdf.sh input.html output.pdf
 # Пути аргументов считаются от корня репозитория.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-in="${1:?usage: build-html.sh input.html output.pdf}"
-out="${2:?usage: build-html.sh input.html output.pdf}"
+in="${1:?usage: build-html-to-pdf.sh input.html output.pdf}"
+out="${2:?usage: build-html-to-pdf.sh input.html output.pdf}"
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 

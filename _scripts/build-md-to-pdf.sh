@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Универсальная сборка: markdown -> HTML -> PDF (A4), без шаблона pandoc.
-# Использование: ./_scripts/build-pdf.sh input.md output.pdf
+# Использование: ./_scripts/build-md-to-pdf.sh input.md output.pdf
 # Пути аргументов считаются от корня репозитория.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-in="${1:?usage: build-pdf.sh input.md output.pdf}"
-out="${2:?usage: build-pdf.sh input.md output.pdf}"
+in="${1:?usage: build-md-to-pdf.sh input.md output.pdf}"
+out="${2:?usage: build-md-to-pdf.sh input.md output.pdf}"
 tmp="$(mktemp -d)"
 
 pandoc -f markdown -t html5 "$in" -o "$tmp/body.html"
